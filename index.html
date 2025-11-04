@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulario</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="formInfoPersonal">
+            <h1>Información Personal</h1>
+            <form id="form-personal" action="procesar.php" method="get">
+                <label for="nombre">Nombre completo:</label><br>
+                <input type="text" required><br>
+                <label for="email">Correo electrónico:</label><br>
+                <input type="email" required><br>
+                <label for="telefono">Número de teléfono:</label><br>
+                <input type="tel" required><br>
+                <label for="fechaNac">Fecha de nacimiento:</label><br>
+                <input type="date" required><br>
+                <label for="genero">Género</label><br>
+                <input type="radio" id="masc" name="genero" value="Masculino">
+                <label for="masc">Masculino</label><br>
+                <input type="radio" id="fem" name="genero" value="Femenino">
+                <label for="fem">Femenino</label><br>
+                <input type="radio" id="otro" name="genero" value="Otro">
+                <label for="otro">Otro</label><br>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        <div class="formInfoEvento">
+            <h1>Información del Evento</h1>
+            <form id="form-evento" action="procesar.php" method="get">
+                <label for="fecEvento">Fecha del evento:</label><br>
+                <input type="date" required><br>
+                <label
+            </form>
+        </div>
+    </body>
+</html>
