@@ -7,34 +7,161 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div class="formInfoPersonal">
-            <h1>Información Personal</h1>
-            <form id="form-personal" action="procesar.php" method="get">
-                <label for="nombre">Nombre completo:</label><br>
-                <input type="text" required><br>
-                <label for="email">Correo electrónico:</label><br>
-                <input type="email" required><br>
-                <label for="telefono">Número de teléfono:</label><br>
-                <input type="tel" required><br>
-                <label for="fechaNac">Fecha de nacimiento:</label><br>
-                <input type="date" required><br>
-                <label for="genero">Género</label><br>
-                <input type="radio" id="masc" name="genero" value="Masculino">
-                <label for="masc">Masculino</label><br>
-                <input type="radio" id="fem" name="genero" value="Femenino">
-                <label for="fem">Femenino</label><br>
-                <input type="radio" id="otro" name="genero" value="Otro">
-                <label for="otro">Otro</label><br>
-                <button type="submit">Enviar</button>
+    <div class="container my-5">
+        <div class="col-md-10 col-lg-8 mx-auto"> <form id="form-completo" action="procesar.php" method="post">
+
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body p-4 p-md-5">
+                        <h1 class="card-title mb-4">Información Personal</h1>
+                        
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre completo:</label>
+                            <input type="text" class="form-control" id="nombre" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo electrónico:</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label">Número de teléfono:</label>
+                            <input type="tel" class="form-control" id="telefono" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="fechaNac" class="form-label">Fecha de nacimiento:</label>
+                            <input type="date" class="form-control" id="fechaNac" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Género</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="masc" name="genero" value="Masculino">
+                                <label class="form-check-label" for="masc">Masculino</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="fem" name="genero" value="Femenino">
+                                <label class="form-check-label" for="fem">Femenino</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body p-4 p-md-5">
+                        <h1 class="card-title mb-4">Información del Evento</h1>
+                        
+                        <div class="mb-3">
+                            <label for="fecEvento" class="form-label">Fecha del evento:</label>
+                            <input type="date" class="form-control" id="fecEvento" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="tipoEntrada" class="form-label">Tipo de entrada</label>
+                            <select class="form-select" name="tipoEntrada" id="tipoEntrada">
+                                <option value="general">General</option>
+                                <option value="vip">VIP</option>
+                                <option value="estudiante">Estudiante</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Preferencias de comida:</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="vegetariano" name="vegetariano" value="Vegetariano">
+                                <label class="form-check-label" for="vegetariano">Vegetariano</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="vegano" name="vegano" value="Vegano">
+                                <label class="form-check-label" for="vegano">Vegano</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="singluten" name="singluten" value="Sin gluten">
+                                <label class="form-check-label" for="singluten">Sin gluten</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="sinpreferencias" name="sinpreferencias" value="Sin preferencias">
+                                <label class="form-check-label" for="sinpreferencias">Sin preferencias</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body p-4 p-md-5">
+                        <h1 class="card-title mb-4">Información de acceso</h1>
+                        
+                        <div class="mb-3">
+                            <label for="nomUsuario" class="form-label">Nombre de usuario:</label>
+                            <input type="text" class="form-control" id="nomUsuario" name="nomUsuario" placeholder="Nombre de usuario" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="password2" class="form-label">Confirmar contraseña</label>
+                            <input type="password" class="form-control" id="password2" name="password2" placeholder="Confirmar contraseña" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body p-4 p-md-5">
+                        <h1 class="card-title mb-4">Preferencias de contacto</h1>
+                        
+                        <div class="mb-3 form-check form-switch"> 
+                            <input class="form-check-input" type="checkbox" role="switch" id="aceptarNotisEmail" name="aceptarNotisEmail" value="Sí">
+                            <label class="form-check-label" for="aceptarNotisEmail">¿Desea recibir notificaciones por correo electrónico?</label>
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input class="form-check-input" type="checkbox" id="aceptarTerminos" name="aceptarTerminos" value="Sí, acepto los términos y condiciones">
+                            <label class="form-check-label" for="aceptarTerminos">Acepto los términos y condiciones</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body p-4 p-md-5">
+                        <h1 class="card-title mb-4">Encuesta adicional</h1>
+                        
+                        <div class="mb-3">
+                            <label for="calificarEventos" class="form-label">¿Cómo calificas este formulario? (0 a 10)</label>
+                            <input type="range" class="form-range" min="0" max="10" value="5" id="calificarEventos">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="comentarios" class="form-label">Comentarios adicionales</label>
+                            <textarea class="form-control" id="comentarios" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body p-4 p-md-5">
+                        <h1 class="card-title mb-4">Adjuntar Archivo</h1>
+                        <div class="mb-3">
+                            <label for="adjuntoArchivo" class="form-label">Selecciona un archivo</label>
+                            <input class="form-control" type="file" id="adjuntoArchivo">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <button type="submit" class="btn btn-info btn-lg px-5 text-white">
+                        Enviar Formulario
+                    </button>
+                </div>
+
             </form>
+            
         </div>
-        <div class="formInfoEvento">
-            <h1>Información del Evento</h1>
-            <form id="form-evento" action="procesar.php" method="get">
-                <label for="fecEvento">Fecha del evento:</label><br>
-                <input type="date" required><br>
-                <label
-            </form>
-        </div>
-    </body>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
 </html>
